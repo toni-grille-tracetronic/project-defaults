@@ -1,14 +1,26 @@
 # Pre-commit plugins https://pre-commit.com/#plugins
 # Supported hooks https://pre-commit.com/hooks.html
 
+fail_fast: true
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+-   repo: local
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 22.10.0
-    hooks:
-    -   id: black
+    -   id: ruff
+        name: ruff check
+        entry: ruff check
+        language:  python
+        types_or: [python, pyi, jupyter]
+
+    -   id: ruff
+        name: ruff format
+        entry: ruff format
+        language:  python
+        types_or: [python, pyi, jupyter]
+
+    # -   id: commit-msg
+    #     stages:
+    #       - prepare-commit-msg
+    #     name: check commit message
+    #     entry: python hooks/commit-msg.py
+    #     language: system
+    #     verbose: true

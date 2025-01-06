@@ -1,6 +1,6 @@
 # Guidelines
 
-## Each repository uses pre-commit checks 
+## Each repository uses pre-commit checks
 
 * pre-commit >= 4.0.1 installed
 * one file ".pre-commit-config.yaml" created

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "project-defaults"
-version = "0.1.0"
+version = "0.0.0"
 description = ""
 authors = ["cariad-ude"]
 readme = "README.md"
@@ -8,10 +8,19 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 ruff = "^0.8.6"
+pre-commit = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
+exclude = [".vscode"]
 line-length = 120
+indent-width = 4
+
+[tool.ruff.format]
+preview = true
+indent-style = "space"
+line-ending = "lf"
+docstring-code-format = true
