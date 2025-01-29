@@ -21,7 +21,7 @@
     * pyproject.toml
     * .pre-commit-config.yaml
     * README.md
-    * (project-name)
+    * src
         * __init__.py
     * tests
         * __init__.py
